@@ -45,7 +45,6 @@ class _SuccessScreenState extends State<SuccessScreen>
       body: Stack(
         alignment: Alignment.topCenter,
         children: [
-          // Background gradient
           Container(
             decoration: const BoxDecoration(
               gradient: LinearGradient(
@@ -56,7 +55,6 @@ class _SuccessScreenState extends State<SuccessScreen>
             ),
           ),
 
-          // Confetti burst from top center
           ConfettiWidget(
             confettiController: _confetti,
             blastDirectionality: BlastDirectionality.explosive,
@@ -75,7 +73,6 @@ class _SuccessScreenState extends State<SuccessScreen>
             ],
           ),
 
-          // Content
           SafeArea(
             child: Center(
               child: Padding(
@@ -83,7 +80,6 @@ class _SuccessScreenState extends State<SuccessScreen>
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    // Bouncing checkmark icon
                     ScaleTransition(
                       scale: _scaleAnim,
                       child: Container(
@@ -152,7 +148,6 @@ class _SuccessScreenState extends State<SuccessScreen>
                               borderRadius: BorderRadius.circular(30)),
                           elevation: 3,
                         ),
-                        // Can't go back to form — pushReplacement was used
                         onPressed: () => Navigator.of(context)
                             .popUntil((route) => route.isFirst),
                         child: const Text(

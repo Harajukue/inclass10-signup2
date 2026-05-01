@@ -23,7 +23,6 @@ class WelcomeScreen extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // App icon
                   Container(
                     padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
@@ -36,7 +35,6 @@ class WelcomeScreen extends StatelessWidget {
 
                   const SizedBox(height: 32),
 
-                  // Animated typewriter title
                   AnimatedTextKit(
                     animatedTexts: [
                       TypewriterAnimatedText(
@@ -56,7 +54,6 @@ class WelcomeScreen extends StatelessWidget {
 
                   const SizedBox(height: 12),
 
-                  // Subtitle with fade-in feel
                   AnimatedTextKit(
                     animatedTexts: [
                       FadeAnimatedText(
@@ -76,7 +73,6 @@ class WelcomeScreen extends StatelessWidget {
 
                   const SizedBox(height: 56),
 
-                  // Get Started button
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(

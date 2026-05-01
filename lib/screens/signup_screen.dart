@@ -62,11 +62,9 @@ class _SignupScreenState extends State<SignupScreen> {
     }
 
     setState(() => _isLoading = true);
-    // Simulate brief network/processing delay before navigating
     await Future.delayed(const Duration(milliseconds: 1400));
 
     if (mounted) {
-      // pushReplacement — can't go back and resubmit accidentally
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
@@ -115,7 +113,6 @@ class _SignupScreenState extends State<SignupScreen> {
 
                 const SizedBox(height: 24),
 
-                // Full Name
                 TextFormField(
                   controller: _nameController,
                   textCapitalization: TextCapitalization.words,
@@ -134,7 +131,6 @@ class _SignupScreenState extends State<SignupScreen> {
 
                 const SizedBox(height: 14),
 
-                // Email
                 TextFormField(
                   controller: _emailController,
                   keyboardType: TextInputType.emailAddress,
@@ -153,7 +149,6 @@ class _SignupScreenState extends State<SignupScreen> {
 
                 const SizedBox(height: 14),
 
-                // Birth Date picker (enhanced over Part 1)
                 GestureDetector(
                   onTap: _pickDate,
                   child: Container(
@@ -189,7 +184,6 @@ class _SignupScreenState extends State<SignupScreen> {
 
                 const SizedBox(height: 14),
 
-                // Password
                 TextFormField(
                   controller: _passwordController,
                   obscureText: _obscurePassword,
@@ -215,7 +209,6 @@ class _SignupScreenState extends State<SignupScreen> {
 
                 const SizedBox(height: 14),
 
-                // Confirm Password
                 TextFormField(
                   controller: _confirmController,
                   obscureText: _obscureConfirm,
@@ -241,7 +234,6 @@ class _SignupScreenState extends State<SignupScreen> {
 
                 const SizedBox(height: 28),
 
-                // Sign Up button — shows loading spinner while processing
                 ElevatedButton(
                   onPressed: _isLoading ? null : _submit,
                   style: ElevatedButton.styleFrom(
